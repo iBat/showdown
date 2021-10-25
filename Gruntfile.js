@@ -8,10 +8,12 @@ module.exports = function (grunt) {
     require('quiet-grunt');
   }
 
+  var pkg = grunt.file.readJSON('package.json');
+
   // Project configuration.
   var config = {
-    pkg: grunt.file.readJSON('package.json'),
-
+    pkg: pkg,
+    pkgName: pkg.name.split('-')[1],
     concat: {
       options: {
         sourceMap: true,
@@ -28,11 +30,11 @@ module.exports = function (grunt) {
           'src/converter.js',
           'src/loader.js'
         ],
-        dest: 'dist/<%= pkg.name %>.js'
+        dest: 'dist/<%= pkgName %>.js'
       },
       test: {
         src: '<%= concat.dist.src %>',
-        dest: '.build/<%= pkg.name %>.js',
+        dest: '.build/<%= pkgName %>.js',
         options: {
           sourceMap: false
         }
@@ -48,7 +50,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'dist/<%= pkgName %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },
@@ -56,8 +58,8 @@ module.exports = function (grunt) {
     endline: {
       dist: {
         files: {
-          'dist/<%= pkg.name %>.js': 'dist/<%= pkg.name %>.js',
-          'dist/<%= pkg.name %>.min.js': 'dist/<%= pkg.name %>.min.js'
+          'dist/<%= pkgName %>.js': 'dist/<%= pkgName %>.js',
+          'dist/<%= pkgName %>.min.js': 'dist/<%= pkgName %>.min.js'
         }
       }
     },
