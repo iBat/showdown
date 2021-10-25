@@ -1,4 +1,4 @@
-;/*! dx-showdown v 1.0.0 - 25-10-2021 */
+;/*! devextreme-showdown v 1.0.0 - 25-10-2021 */
 (function(){
 /**
  * Created by Tivie on 13-07-2015.
