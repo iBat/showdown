@@ -1,4 +1,4 @@
-![Devextreme-Showdown][sd-logo]
+![DevExtreme Showdown][sd-logo]
 
 [![npm version](https://badge.fury.io/js/devextreme-showdown.svg)](http://badge.fury.io/js/devextreme-showdown)
 
@@ -12,7 +12,7 @@ Showdown can be used client side (in the browser) or server side (with NodeJs).
 
 ## License
 
-Devextreme-Showdown is release under the MIT version.
+DevExtreme Showdown is released under the MIT license.
 
 ## Installation
 
@@ -40,7 +40,7 @@ You can also use one of several CDNs available:
        
         https://unpkg.com/devextreme-showdown/dist/showdown.min.js
 
-*Note*: replace `<version tag>` with an actual full length version you're interested in e.g. `1.0.0`
+*Note*: Replace `<version tag>` with an actual version you're interested in, for instance `1.0.0`.
 
 ## Quick Example
 
