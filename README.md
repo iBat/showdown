@@ -1,42 +1,18 @@
-![Showdown][sd-logo]
+![DevExtreme Showdown][sd-logo]
 
-[![Build Status: Linux](https://travis-ci.org/showdownjs/showdown.svg?branch=master)](https://travis-ci.org/showdownjs/showdown)
-[![Build Status: Windows](https://ci.appveyor.com/api/projects/status/github/showdownjs/showdown?branch=master&svg=true)](https://ci.appveyor.com/project/tivie/showdown/branch/master)
-[![npm version](https://badge.fury.io/js/showdown.svg)](http://badge.fury.io/js/showdown)
-[![Bower version](https://badge.fury.io/bo/showdown.svg)](http://badge.fury.io/bo/showdown)
-[![Join the chat at https://gitter.im/showdownjs/showdown](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/showdownjs/showdown?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Greenkeeper badge](https://badges.greenkeeper.io/showdownjs/showdown.svg)](https://greenkeeper.io/)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/tiviesantos)
+[![npm version](https://badge.fury.io/js/devextreme-showdown.svg)](http://badge.fury.io/js/devextreme-showdown)
 
 ------
 
 Showdown is a Javascript Markdown to HTML converter, based on the original works by John Gruber.
 Showdown can be used client side (in the browser) or server side (with NodeJs).
 
-## Live DEMO
 
-Check a live Demo here http://demo.showdownjs.com/
-
-## [![Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=11141581)
-
-As you know, ShowdownJS is a free library and it will remain free forever. However, maintaining and improving the library costs time and money.
-
-If you like our work and find our library useful, please donate through [patreon](https://www.patreon.com/showdownjs) or directly through [paypal](https://www.paypal.me/tiviesantos)!! Your contribution will be greatly appreciated and help me continue to develop this awesome library.
+**This fork was created to fix the [CVE-2020-7774](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7774) vulnerability and keep dependencies up to date**
 
 ## License
 
-ShowdownJS v 2.0 is release under the MIT version.
-Previous versions are release under BSD.
-
-## Who uses Showdown (or a fork)
-
- - [GoogleCloudPlatform](https://github.com/GoogleCloudPlatform)
- - [Meteor](https://www.meteor.com/)
- - [Stackexchange](http://stackexchange.com/) - forked as [PageDown](https://code.google.com/p/pagedown/)
- - [docular](https://github.com/Vertafore/docular)
- - [md-page](https://github.com/oscarmorrison/md-page)
- - [QCObjects](https://qcobjects.dev)
- - [and some others...](https://www.npmjs.com/browse/depended/showdown)
+DevExtreme Showdown is released under the MIT license.
 
 ## Installation
 
@@ -44,19 +20,9 @@ Previous versions are release under BSD.
 
 You can download the latest release tarball directly from [releases][releases]
 
-### Bower
-
-    bower install showdown
-
 ### npm (server-side)
 
-    npm install showdown
-
-### NuGet package
-
-    PM> Install-Package showdownjs
-
-The NuGet Packages can be [found here](https://www.nuget.org/packages/showdownjs/).
+    npm install devextreme-showdown
 
 ### CDN
 
@@ -64,56 +30,20 @@ You can also use one of several CDNs available:
 
 * jsDelivr
 
-        https://cdn.jsdelivr.net/npm/showdown@<version tag>/dist/showdown.min.js
-
-* cdnjs
-
-        https://cdnjs.cloudflare.com/ajax/libs/showdown/<version tag>/showdown.min.js
+        https://cdn.jsdelivr.net/npm/devextreme-showdown@<version tag>/dist/showdown.min.js
 
 * unpkg
        
-        https://unpkg.com/showdown/dist/showdown.min.js
+        https://unpkg.com/devextreme-showdown/dist/showdown.min.js
 
-*Note*: replace `<version tag>` with an actual full length version you're interested in e.g. `1.9.0`
-## Browser Compatibility
-
-Showdown has been tested successfully with:
-
-  * Firefox 1.5 and 2.0
-  * Chrome 12.0
-  * Internet Explorer 6 and 7
-  * Safari 2.0.4
-  * Opera 8.54 and 9.10
-  * Netscape 8.1.2
-  * Konqueror 3.5.4
-
-In theory, Showdown will work in any browser that supports ECMA 262 3rd Edition (JavaScript 1.5).
-The converter itself might even work in things that aren't web browsers, like Acrobat.  No promises.
-
-
-## Node compatibility
-
-Showdown has been tested with node 0.8 and 0.10. However, it should work with previous versions, such as node 0.6.
-
-
-## Legacy version
-
-If you're looking for showdown v<1.0.0, you can find it in the [**legacy branch**][legacy-branch].
-
-## Changelog
-
-You can check the full [changelog][changelog]
-
-## Extended documentation
-Check our [wiki pages][wiki] for examples and a more in-depth documentation.
-
+*Note*: Replace `<version tag>` with an actual version you're interested in, for instance `1.0.0`.
 
 ## Quick Example
 
 ### Node
 
 ```js
-var showdown  = require('showdown'),
+var showdown  = require('devextreme-showdown'),
     converter = new showdown.Converter(),
     text      = '# hello, markdown!',
     html      = converter.makeHtml(text);
@@ -438,7 +368,7 @@ var converter = new showdown.Converter({ extensions: ['twitter'] });
 ### Server-side Extension Usage
 
 ```js
-var showdown    = require('showdown'),
+var showdown    = require('devextreme-showdown'),
     myExtension = require('myExtension'),
     converter = new showdown.Converter({ extensions: ['myExtension'] });
 ```
@@ -457,52 +387,6 @@ Once installed the tests can be run from the project root using:
 New test cases can easily be added.  Create a markdown file (ending in `.md`) which contains the markdown to test.
 Create a `.html` file of the exact same name.  It will automatically be tested when the tests are executed with `mocha`.
 
-## Contributing
-
-If you wish to contribute please read the following quick guide.
-
-### Want a Feature?
-You can request a new feature by submitting an issue. If you would like to implement a new feature feel free to issue a
-Pull Request.
-
-
-### Pull requests (PRs)
-PRs are awesome. However, before you submit your pull request consider the following guidelines:
-
- - Search GitHub for an open or closed Pull Request that relates to your submission. You don't want to duplicate effort.
- - When issuing PRs that change code, make your changes in a new git branch based on master:
-
-   ```bash
-   git checkout -b my-fix-branch master
-   ```
-
- - Documentation (i.e: README.md) changes can be made directly against master.
- - Run the full test suite before submitting and make sure all tests pass (obviously =P).
- - Try to follow our [**coding style rules**][coding-rules].
-   Breaking them prevents the PR to pass the tests.
- - Refrain from fixing multiple issues in the same pull request. It's preferable to open multiple small PRs instead of one
-   hard to review big one.
- - If the PR introduces a new feature or fixes an issue, please add the appropriate test case.
- - We use commit notes to generate the changelog. It's extremely helpful if your commit messages adhere to the
- [**AngularJS Git Commit Guidelines**][ng-commit-guide].
- - If we suggest changes then:
-     - Make the required updates.
-     - Re-run the Angular test suite to ensure tests are still passing.
-     - Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
-
-     ```bash
-     git rebase master -i
-     git push origin my-fix-branch -f
-     ```
- - After your pull request is merged, you can safely delete your branch.
-
-If you have time to contribute to this project, we feel obliged that you get credit for it.
-These rules enable us to review your PR faster and will give you appropriate credit in your GitHub profile.
-We thank you in advance for your contribution!
-
-### Joining the team
-We're looking for members to help maintaining Showdown.
-Please see [this issue](https://github.com/showdownjs/showdown/issues/114) to express interest or comment on this note.
 
 ## Credits
 Full credit list at https://github.com/showdownjs/showdown/blob/master/CREDITS.md
