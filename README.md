@@ -20,10 +20,6 @@ DevExtreme Showdown is released under the MIT license.
 
 You can download the latest release tarball directly from [releases][releases]
 
-### Bower
-
-    bower install devextreme-showdown
-
 ### npm (server-side)
 
     npm install devextreme-showdown
